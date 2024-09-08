@@ -1,0 +1,10 @@
+[package]
+name = "blenvy_test_1"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.14.1"
+bevy_third_person_camera = "0.1.11"
+blenvy = "0.1.0-alpha.1"
+leafwing-input-manager = "0.15.0"
