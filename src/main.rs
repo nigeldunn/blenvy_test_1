@@ -1,6 +1,8 @@
+use std::f32::consts::PI;
+
 use bevy::{
     prelude::*, 
-    color::palettes::basic::SILVER,
+    pbr::CascadeShadowConfigBuilder,
 };
 use leafwing_input_manager::prelude::*;
 use bevy_third_person_camera::*;
@@ -91,6 +93,7 @@ fn spawn_world(
 
     let light = PointLightBundle {
         point_light: PointLight {
+            shadows_enabled: true,
             intensity: 1500.0 * 1000.0,
             ..default()
         },
@@ -100,7 +103,10 @@ fn spawn_world(
 
     commands.spawn(floor);
     commands.spawn(light);
+
+
 }
+
 
 // fn player_actions (query: Query<&ActionState<Action>, With<Player>>) {
 //     let action_state = query.single();
